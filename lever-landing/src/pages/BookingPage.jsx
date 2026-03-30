@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { Clock, Layers, Activity } from 'lucide-react'
 import Cal from '@calcom/embed-react'
-import leverLogo from '../assets/leverLogo.jpeg'
+import vLogo from '../assets/booking_Logo.png'
 import { fadeUp, staggerContainer } from '../lib/variants'
 import Footer from '../components/Footer'
 
@@ -54,30 +54,15 @@ export default function BookingPage() {
             height: '64px',
             display: 'flex',
             alignItems: 'center',
+            justifyContent: 'center',
           }}
         >
-          <Link
-            to="/"
-            aria-label="Back to Lever"
-            style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}
-          >
+          <Link to="/" aria-label="Back to Lever" style={{ display: 'inline-flex', alignItems: 'center', textDecoration: 'none' }}>
             <img
-              src={leverLogo}
-              alt=""
-              style={{ height: '36px', width: '36px', borderRadius: '8px', objectFit: 'cover', flexShrink: 0 }}
+              src={vLogo}
+              alt="Lever"
+              style={{ height: '48px', width: 'auto', objectFit: 'contain', borderRadius: '8px', mixBlendMode: 'screen' }}
             />
-            <span
-              style={{
-                fontFamily: '"Clash Grotesk", sans-serif',
-                fontWeight: 700,
-                fontSize: '18px',
-                letterSpacing: '-0.5px',
-                color: 'var(--text-1)',
-                textTransform: 'uppercase',
-              }}
-            >
-              Lever
-            </span>
           </Link>
         </div>
       </nav>

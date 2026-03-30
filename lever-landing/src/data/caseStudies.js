@@ -28,7 +28,7 @@ export const caseStudies = [
     metric1Label: 'saved per week',
     metric2: '3',
     metric2Label: 'AI workflows',
-    quote: 'The n8n workflows they built do what used to take our ops team an entire day.',
+    quote: 'They built us three automation systems in two weeks. Work that used to eat 15 hours a week now happens without anyone touching it.',
     attribution: 'Head of Operations',
     company: 'B2B health platform',
   },

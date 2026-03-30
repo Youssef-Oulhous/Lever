@@ -212,7 +212,7 @@ export default function HealthCheck() {
                     textDecoration: 'none',
                     fontFamily: '"Clash Grotesk", sans-serif',
                     background: score > 0 ? 'var(--accent)' : 'rgba(255,255,255,0.08)',
-                    color: score > 0 ? '#FFFFFF' : 'var(--text-3)',
+                    color: score > 0 ? '#0B0C0A' : 'var(--text-3)',
                     transition: 'background 0.2s cubic-bezier(0.69,0,0,1), color 0.2s cubic-bezier(0.69,0,0,1)',
                   }}
                 >

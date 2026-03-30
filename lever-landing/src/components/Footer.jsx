@@ -1,4 +1,4 @@
-import leverLogo from '../assets/leverLogo.jpeg'
+import newLogo from '../assets/mainLogo.png'
 
 const columns = [
   {
@@ -59,22 +59,10 @@ export default function Footer() {
               style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', textDecoration: 'none', marginBottom: '16px' }}
             >
               <img
-                src={leverLogo}
-                alt=""
-                style={{ height: '36px', width: '36px', borderRadius: '8px', objectFit: 'cover', flexShrink: 0 }}
+                src={newLogo}
+                alt="Lever"
+                style={{ height: '48px', width: 'auto', objectFit: 'contain', flexShrink: 0, borderRadius: '8px', mixBlendMode: 'screen' }}
               />
-              <span
-                style={{
-                  fontFamily: '"Clash Grotesk", sans-serif',
-                  fontWeight: 700,
-                  fontSize: '18px',
-                  letterSpacing: '-0.5px',
-                  color: 'var(--text-1)',
-                  textTransform: 'uppercase',
-                }}
-              >
-                Lever
-              </span>
             </a>
             <p
               style={{

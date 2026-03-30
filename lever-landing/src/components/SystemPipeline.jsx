@@ -9,13 +9,15 @@ function PipelineNode({ node, isLast }) {
   const isAccent = node.type === 'sage'
 
   return (
-    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
+    <div style={{ display: 'flex', alignItems: 'stretch', gap: '16px', height: '100%' }}>
       <motion.div
         variants={fadeUp}
         whileHover={{ y: -6 }}
         transition={{ duration: 0.3, ease }}
         style={{
           flex: 1,
+          display: 'flex',
+          flexDirection: 'column',
           padding: '28px 24px',
           borderRadius: '32px',
           background: 'rgba(255,255,255,0.03)',
@@ -87,7 +89,7 @@ function PipelineNode({ node, isLast }) {
         </p>
 
         {/* Tool tags */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: 'auto' }}>
           {node.tools.map((tool) => (
             <span
               key={tool}
@@ -182,6 +184,7 @@ export default function SystemPipeline() {
             style={{
               gap: '12px',
               marginBottom: '40px',
+              alignItems: 'stretch',
             }}
           >
             {pipelineNodes.map((node, i) => (
@@ -200,6 +203,7 @@ export default function SystemPipeline() {
               display: 'flex',
               flexWrap: 'wrap',
               alignItems: 'center',
+              justifyContent: 'center',
               gap: '24px',
               paddingTop: '24px',
               borderTop: '1px solid rgba(255,255,255,0.08)',

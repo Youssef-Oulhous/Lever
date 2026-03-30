@@ -299,9 +299,21 @@ export default function Comparison() {
           </div>
 
           {/* Email mockups — Lever first */}
-          <motion.div variants={fadeUp} style={{ marginBottom: '16px' }}>
-            <p style={{ fontSize: '14px', fontWeight: 500, color: 'var(--text-3)', marginBottom: '16px' }}>
-              The difference in practice — same prospect, two approaches:
+          <motion.div variants={fadeUp} style={{ marginBottom: '32px', textAlign: 'center' }}>
+            <p style={{
+              fontSize: 'clamp(18px, 2.5vw, 26px)',
+              fontWeight: 600,
+              fontFamily: 'Geist, sans-serif',
+              color: 'var(--text-1)',
+              lineHeight: 1.4,
+              letterSpacing: '-0.3px',
+              maxWidth: '640px',
+              margin: '0 auto',
+            }}>
+              Your prospects get 47 cold emails a day.{' '}
+              <span style={{ color: 'var(--accent)' }}>
+                They open the one that doesn't sound like one.
+              </span>
             </p>
           </motion.div>
 

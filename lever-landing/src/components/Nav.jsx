@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import leverLogo from '../assets/leverLogo.jpeg'
+import newLogo from '../assets/mainLogo.png'
 
 const navLinks = [
   { label: 'System', href: '#system' },
@@ -56,29 +56,18 @@ export default function Nav() {
           style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}
         >
           <img
-            src={leverLogo}
-            alt=""
+            src={newLogo}
+            alt="Lever"
             style={{
-              height: '36px',
-              width: '36px',
-              borderRadius: '8px',
+              height: '52px',
+              width: 'auto',
               display: 'block',
-              objectFit: 'cover',
+              objectFit: 'contain',
+              borderRadius: '8px',
               flexShrink: 0,
+              mixBlendMode: 'screen',
             }}
           />
-          <span
-            style={{
-              fontFamily: '"Clash Grotesk", sans-serif',
-              fontWeight: 700,
-              fontSize: '18px',
-              letterSpacing: '-0.5px',
-              color: 'var(--text-1)',
-              textTransform: 'uppercase',
-            }}
-          >
-            Lever
-          </span>
         </a>
 
         {/* Nav links — desktop */}
@@ -108,8 +97,8 @@ export default function Nav() {
             to="/book"
             style={{
               display: 'inline-block',
-              background: '#6EC531',
-              color: '#FFFFFF',
+              background: 'var(--accent)',
+              color: '#0B0C0A',
               borderRadius: '100px',
               padding: '10px 20px',
               fontSize: '14px',

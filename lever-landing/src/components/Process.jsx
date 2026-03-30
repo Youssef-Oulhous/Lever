@@ -91,9 +91,9 @@ export default function Process() {
               className="hidden md:block process-connector"
               style={{
                 position: 'absolute',
-                top: '32px',
-                left: '32px',
-                right: '32px',
+                top: '48px',
+                left: '52px',
+                right: '52px',
                 height: '1px',
                 background: 'rgba(255,255,255,0.08)',
               }}
@@ -105,13 +105,14 @@ export default function Process() {
               className="grid-4"
               style={{
                 gap: '16px',
+                alignItems: 'stretch',
               }}
             >
               {phases.map((phase) => (
                 <motion.div
                   key={phase.id}
                   variants={fadeUp}
-                  style={{ position: 'relative' }}
+                  style={{ position: 'relative', display: 'flex', flexDirection: 'column' }}
                 >
                   {/* Phase number dot */}
                   <div
@@ -173,6 +174,7 @@ export default function Process() {
 
                   <div
                     style={{
+                      flex: 1,
                       padding: '28px 24px',
                       borderRadius: '32px',
                       background: 'rgba(255,255,255,0.03)',
