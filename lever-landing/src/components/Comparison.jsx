@@ -153,7 +153,7 @@ function EmailMockup({ type }) {
         <p style={{ fontSize: '12px', color: 'var(--text-4)', margin: '0 0 4px' }}>
           From:{' '}
           <span style={{ color: 'var(--text-3)' }}>
-            {isLever ? 'anas@lever-agency.com' : 'sales@noreply-bulk.com'}
+            {isLever ? 'lever@lever-agency.com' : 'sales@noreply-bulk.com'}
           </span>
         </p>
         <p style={{ fontSize: '12px', color: 'var(--text-4)', margin: 0 }}>
