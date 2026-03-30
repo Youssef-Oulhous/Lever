@@ -1,0 +1,215 @@
+@import url('https://api.fontshare.com/v2/css?f[]=clash-grotesk@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@font-face {
+  font-family: 'Clash Grotesk';
+  src: url('https://framerusercontent.com/third-party-assets/fontshare/wf/P6VJ47S3OYMUC7HYSJLTK7PEIK5O2NPQ/TK62VLUWA76PMTK2XWBNDZB7QVXJGYE3/I5W5NEJGYVFUC5I4XOXVET63OE5PSVHJ.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #012422;
+  --bg-raised: #1B3A39;
+  --bg-glass: rgba(255,255,255,0.03);
+  --accent: #FAF771;
+  --accent-dim: rgba(250,247,113,0.12);
+  --accent-border: rgba(250,247,113,0.25);
+  --leaf: #6EC531;
+  --leaf-dim: rgba(110,197,49,0.12);
+  --leaf-border: rgba(110,197,49,0.25);
+  --text-1: #FEFFFC;
+  --text-2: rgba(255,255,255,0.75);
+  --text-3: rgba(255,255,255,0.5);
+  --text-4: rgba(255,255,255,0.3);
+  --border: rgba(255,255,255,0.1);
+  --border-subtle: rgba(255,255,255,0.06);
+  --card-shadow: 0 2px 6px rgba(0,20,19,.05), 0 8px 24px rgba(0,20,19,.08), 0 24px 48px rgba(0,20,19,.06), 0 0 0 1px rgba(255,255,255,.08);
+  --card-shadow-hover: 0 4px 12px rgba(0,20,19,.08), 0 16px 48px rgba(0,20,19,.12), 0 48px 96px rgba(0,20,19,.08), 0 0 0 1px rgba(255,255,255,.12);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text-1);
+  font-family: 'Geist', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* { box-sizing: border-box; }
+#root { min-height: 100vh; }
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+.animate-marquee         { animation: marquee         30s linear infinite; }
+.animate-marquee-fast    { animation: marquee         22s linear infinite; }
+.animate-marquee-reverse { animation: marquee-reverse 26s linear infinite; }
+
+.marquee-track:hover .animate-marquee,
+.marquee-track:hover .animate-marquee-fast,
+.marquee-track:hover .animate-marquee-reverse { animation-play-state: paused; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee, .animate-marquee-fast, .animate-marquee-reverse { animation-play-state: paused; }
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 2px; }
+
+/* ── Responsive grids ─────────────────────────── */
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 900px) {
+  .grid-4   { grid-template-columns: repeat(2, 1fr); }
+  .grid-stats { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 540px) {
+  .grid-4   { grid-template-columns: 1fr; }
+  .grid-stats { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 360px) {
+  .grid-stats { grid-template-columns: 1fr; }
+}
+
+/* ── Nav ──────────────────────────────────────── */
+.nav-links { display: flex; align-items: center; gap: 32px; }
+@media (max-width: 600px) { .nav-links { display: none; } }
+
+/* ── Comparison columns: side-by-side → stack on mobile ── */
+.comparison-cols { display: flex; gap: 16px; }
+.comparison-cols > * { flex: 1 1 0; min-width: 0; }
+@media (max-width: 640px) {
+  .comparison-cols { flex-direction: column; }
+}
+
+/* ── Misc mobile helpers ──────────────────────── */
+@media (max-width: 600px) {
+  .hide-mobile { display: none !important; }
+}
+
+/* ── FinalCTA 2-col → 1-col on mobile ─────────── */
+@media (max-width: 768px) {
+  .final-cta-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ── FinalCTA card — stack on mobile ──────────── */
+@media (max-width: 640px) {
+  .final-cta-card { flex-direction: column !important; }
+}
+
+/* ── Motivational card — stack on mobile ─────── */
+@media (max-width: 640px) {
+  .motivational-card {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── Footer grid responsive ───────────────────── */
+@media (max-width: 860px) {
+  .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
+}
+@media (max-width: 500px) {
+  .footer-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
+}
+
+/* ════════════════════════════════════════════════
+   GLOBAL MOBILE SAFETY
+   ════════════════════════════════════════════════ */
+
+/* Prevent horizontal overflow on all screens */
+html, body { overflow-x: hidden; max-width: 100%; }
+
+/* ── Tablet (≤ 768px) ─────────────────────────── */
+@media (max-width: 768px) {
+  /* Booking & FinalCTA grid gap reduction */
+  .final-cta-grid { gap: 32px !important; }
+  .booking-grid { gap: 32px !important; }
+
+  /* Motivational card gap */
+  .motivational-card { gap: 32px !important; }
+
+  /* Footer bottom row stack */
+  .footer-grid { gap: 32px !important; }
+}
+
+/* ── Mobile (≤ 600px) ─────────────────────────── */
+@media (max-width: 600px) {
+  /* Nav: tighten height */
+  nav { min-height: 56px; }
+
+  /* Hero sub text */
+  .hero-sub { font-size: 17px !important; }
+
+  /* Reduce card border-radius on small screens */
+  [style*="border-radius: 32px"] { border-radius: 20px !important; }
+  [style*="border-radius: 24px"] { border-radius: 16px !important; }
+
+  /* Healthcheck card padding */
+  [style*="padding: 20px 24px"] { padding: 16px !important; }
+
+  /* Stats grid gap */
+  .grid-stats { gap: 12px !important; }
+
+  /* FinalCTA card inner text max-width release */
+  .final-cta-card > div { max-width: 100% !important; }
+}
+
+/* ── Small mobile (≤ 480px) ───────────────────── */
+@media (max-width: 480px) {
+  /* Marquee edge fade tighter on small screens */
+  .marquee-track {
+    mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%) !important;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%) !important;
+  }
+
+  /* Process connecting line — hide even on medium phones */
+  .process-connector { display: none !important; }
+
+  /* Reduce section vertical padding */
+  section { padding-top: clamp(40px, 8vw, 80px) !important; padding-bottom: clamp(40px, 8vw, 80px) !important; }
+
+  /* Booking page main padding */
+  main { padding-top: 40px !important; padding-bottom: 40px !important; }
+
+  /* Footer padding */
+  footer { padding-top: 36px !important; padding-bottom: 24px !important; }
+}
+
+/* ── Extra small (≤ 360px) ────────────────────── */
+@media (max-width: 360px) {
+  /* Release any fixed min-widths that could overflow */
+  * { min-width: 0; }
+
+  /* Comparison cols already stack — reduce gap */
+  .comparison-cols { gap: 12px !important; }
+
+  /* HealthCheck score row */
+  [style*="Gaps found"] { flex-wrap: wrap; gap: 8px; }
+}

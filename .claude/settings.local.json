@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(cd /home/axios/Lever-LandingPage/lever-landing && npm install framer-motion@^12 react-countup@^6 lucide-react@^0.400 @calcom/embed-react@^1 geist@^1 2>&1 | tail -10)",
+      "Bash(npm run:*)",
+      "Bash(node -e \"\nconst pkg = require\\('./node_modules/@calcom/embed-react/package.json'\\);\nconsole.log\\('version:', pkg.version\\);\nconsole.log\\('exports:', JSON.stringify\\(pkg.exports, null, 2\\)\\);\n\")",
+      "Bash(node -e \"\nconst { createRequire } = require\\('module'\\);\nconst req = createRequire\\('/home/axios/Lever-LandingPage/lever-landing/package.json'\\);\ntry {\n  const cal = req\\('@calcom/embed-react'\\);\n  console.log\\('exports:', Object.keys\\(cal\\)\\);\n} catch\\(e\\) {\n  console.log\\('error:', e.message\\);\n}\n\")",
+      "Bash(node -e \"\n// Try loading the built JS and see if there are obvious issues\nconst fs = require\\('fs'\\);\nconst js = fs.readFileSync\\('./dist/assets/index-BQm2rT2T.js', 'utf8'\\);\n// Check for any 'throw new Error' in the bundle\nconst errors = js.match\\(/throw new Error\\\\\\([^\\)]+\\\\\\)/g\\);\nconsole.log\\('Errors found in bundle:', errors?.length || 0\\);\nif\\(errors\\) errors.slice\\(0,5\\).forEach\\(e => console.log\\(' -', e\\)\\);\n\")",
+      "WebFetch(domain:agenta.framer.website)",
+      "Bash(npm install:*)",
+      "Bash(node -e \"\nconst si = require\\('simple-icons'\\);\nconst check = ['n8n','zapier','linkedin','openai','make','anthropic','clay','heyreach','instantly','apollo','apolloio','clearbit','lemlist','smartlead','hubspot','hunter','python','slack'];\ncheck.forEach\\(name => {\n  const key = 'si' + name.charAt\\(0\\).toUpperCase\\(\\) + name.slice\\(1\\);\n  console.log\\(key + ': ' + \\(si[key] ? 'YES' : 'NO'\\)\\);\n}\\);\n\" 2>&1)",
+      "Bash(node -e \"\nconst si = require\\('simple-icons'\\);\n// Version-specific slugs\nconst check = ['siLinkedin','siOpenai','siSlack','siAnthropic','siN8n','siZapier','siMake','siPython','siNotion','siAirtable','siApollographql'];\ncheck.forEach\\(key => {\n  const found = si[key];\n  console.log\\(key + ': ' + \\(found ? 'YES - ' + found.title : 'NO'\\)\\);\n}\\);\n\" 2>&1)",
+      "Bash(node -e \"\nconst si = require\\('simple-icons'\\);\n['siN8n','siZapier','siMake','siAnthropic','siPython'].forEach\\(k => {\n  const icon = si[k];\n  if\\(icon\\) console.log\\(k + '|' + icon.hex + '|' + icon.path.substring\\(0,60\\) + '...'\\);\n}\\);\n\" 2>&1)",
+      "Bash(node -e \"\nconst si = require\\('simple-icons'\\);\n['siN8n','siZapier','siMake','siAnthropic'].forEach\\(k => {\n  const icon = si[k];\n  console.log\\('// ' + k\\);\n  console.log\\(JSON.stringify\\(icon.path\\)\\);\n  console.log\\(''\\);\n}\\);\n\" 2>&1)",
+      "WebSearch"
+    ]
+  }
+}
