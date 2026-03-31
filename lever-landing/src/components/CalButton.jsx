@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import Cal, { getCalApi } from '@calcom/embed-react'
 
-const CAL_LINK = 'user-one-icz4uc/gtm-booking'
-const NAMESPACE = 'gtm-booking'
+const CAL_LINK = 'pulsedev/free-gtm-audit'
+const NAMESPACE = 'free-gtm-audit'
 const UI_CONFIG = { theme: 'dark', hideEventTypeDetails: false, layout: 'month_view' }
 
 /* ── Popup hook — use on every CTA button ────────────────── */

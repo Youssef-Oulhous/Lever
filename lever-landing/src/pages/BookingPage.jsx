@@ -227,7 +227,7 @@ export default function BookingPage() {
               }}
             >
               <Cal
-                calLink="user-one-icz4uc/booking-for-the-free-gtm-audit"
+                calLink="pulsedev/free-gtm-audit"
                 config={{ theme: 'dark' }}
                 style={{ width: '100%', height: '100%', minHeight: 'clamp(480px, 80vw, 620px)', overflow: 'scroll' }}
               />

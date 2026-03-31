@@ -14,10 +14,9 @@ const columns = [
   {
     heading: 'Contact',
     links: [
-      { label: 'Email', href: 'mailto:hello@lever-agency.com' },
-      { label: 'X / Twitter', href: '#' },
-      { label: 'LinkedIn', href: '#' },
-      { label: 'YouTube', href: '#' },
+      { label: 'Email', href: 'mailto:anasfadili65@gmail.com' },
+      { label: 'LinkedIn', href: 'https://www.linkedin.com/in/fadilianas/' },
+      { label: 'YouTube', href: 'https://www.youtube.com/@AnasFadili-f2f' },
     ],
   },
   {
