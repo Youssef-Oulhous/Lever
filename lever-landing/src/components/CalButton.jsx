@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import Cal, { getCalApi } from '@calcom/embed-react'
 
-const CAL_LINK = 'pulsedev/free-gtm-audit'
+const CAL_LINK = 'anas-fadili/free-gtm-audit'
 const NAMESPACE = 'free-gtm-audit'
 const UI_CONFIG = { theme: 'dark', hideEventTypeDetails: false, layout: 'month_view' }
 

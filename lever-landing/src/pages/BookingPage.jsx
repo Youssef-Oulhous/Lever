@@ -227,7 +227,7 @@ export default function BookingPage() {
               }}
             >
               <Cal
-                calLink="pulsedev/free-gtm-audit"
+                calLink="anas-fadili/free-gtm-audit"
                 config={{ theme: 'dark' }}
                 style={{ width: '100%', height: '100%', minHeight: 'clamp(480px, 80vw, 620px)', overflow: 'scroll' }}
               />
