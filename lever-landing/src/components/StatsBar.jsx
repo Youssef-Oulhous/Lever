@@ -7,7 +7,7 @@ const stats = [
     id: 1,
     value: 47,
     suffix: '+',
-    label: 'Systems built',
+    label: 'Clients Served',
     sublabel: 'across SaaS, fintech, healthtech',
   },
   {

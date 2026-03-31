@@ -16,8 +16,8 @@ export const faqItems = [
   },
   {
     id: 4,
-    question: 'You are a 2-person team — can you handle this?',
-    answer: "We take on 3-4 clients at a time. That's intentional. You get the founders — not a junior account manager, not a VA, not someone we hired last month. Every system is built by Anas and Adnane directly. The constraint is the feature.",
+    question: 'Will this actually work for our industry and ICP?',
+    answer: "We have built outbound systems across SaaS, fintech, healthtech, and professional services. Before we touch a single tool, we audit your ICP, validate your signal sources, and map the enrichment logic to your deal motion. If a channel or tactic won't move the needle for your market, we say so upfront.",
   },
   {
     id: 5,
