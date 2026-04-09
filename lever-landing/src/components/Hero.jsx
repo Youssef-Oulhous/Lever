@@ -80,7 +80,7 @@ export default function Hero() {
             margin: '0 auto 40px',
           }}
         >
-          Lead enrichment. Cold email. LinkedIn. AI automation. Revenue reporting — one connected system, fully built on your infrastructure. You own everything.
+          Better data. Emails that land. Replies that convert. Meetings that close — one system that compounds, built entirely on your infrastructure. You own everything.
         </motion.p>
 
         {/* CTAs */}
@@ -171,7 +171,7 @@ export default function Hero() {
           {...item(0.4)}
           style={{ fontSize: '14px', color: 'var(--text-3)' }}
         >
-          For B2B teams doing $50K+/mo who need pipeline, not another agency.{' '}
+          For B2B teams doing $100K+/mo who need pipeline, not another agency.{' '}
           <span style={{ color: 'var(--text-2)' }}>Everything we build, you own.</span>
         </motion.p>
       </div>

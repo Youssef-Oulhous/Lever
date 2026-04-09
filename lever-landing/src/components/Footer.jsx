@@ -97,6 +97,7 @@ export default function Footer() {
                     <a
                       href={link.href}
                       style={linkStyle}
+                      {...(link.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                       onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--text-1)')}
                       onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-3)')}
                     >

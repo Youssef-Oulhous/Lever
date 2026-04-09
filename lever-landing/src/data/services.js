@@ -21,7 +21,7 @@ export const pipelineNodes = [
     label: 'Intelligence layer',
     title: 'AI-powered automation',
     description: 'Custom n8n + Python workflows for lead scoring, email personalization, and research automation. 10-20 hrs saved per week.',
-    tools: ['n8n', 'Python', 'OpenAI'],
+    tools: ['n8n', 'Python', 'Claude', 'Zapier'],
   },
   {
     id: 4,
