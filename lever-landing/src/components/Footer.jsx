@@ -19,13 +19,6 @@ const columns = [
       { label: 'YouTube', href: 'https://www.youtube.com/@AnasFadili-f2f' },
     ],
   },
-  {
-    heading: 'Legal',
-    links: [
-      { label: 'Privacy Policy', href: '#' },
-      { label: 'Terms of Use', href: '#' },
-    ],
-  },
 ]
 
 const linkStyle = {
@@ -48,7 +41,7 @@ export default function Footer() {
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
 
         {/* Top row — logo + columns */}
-        <div className="footer-grid" style={{ display: 'grid', gridTemplateColumns: '1fr auto auto auto', gap: '48px', marginBottom: '56px' }}>
+        <div className="footer-grid" style={{ display: 'grid', gridTemplateColumns: '1fr auto auto', gap: '48px', marginBottom: '56px' }}>
 
           {/* Brand block */}
           <div>
